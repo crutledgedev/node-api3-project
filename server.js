@@ -9,9 +9,9 @@ server.use('/api/users', userRouter);
 server.use('/api/posts', postRouter)
 
 server.get('/', (req, res) => {
-  const environment = process.env;
-  const port = process.env.PORT || 4000;
-  res.status(200).json({api: "up", port, environment });
+  // const environment = process.env;
+  // const port = process.env.PORT || 4000;
+  res.send(`<h2>Hi we are deployed</h2>`);
 });
 
 //custom middleware
